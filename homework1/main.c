@@ -16,8 +16,10 @@ int main(void) {
     printf("sum3or5 of %d is %d\n", n, sum3or5(n));
 
     printf("sequence of %d is %d\n", n, sequence(n));
+    
+    long long x = longest();
 
-    printf("The longest sequence is %lld\n", longest());
+    printf("The number %lld produces the longest sequence\n", x);
     
     diamond();
 } 

@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 int sequence(int n){
     int i = 1;
     while(n != 1)
@@ -18,14 +18,15 @@ int sequence(int n){
 }
 
 int longest(void){
-    long long i = 1, longest = 0;
+    long long i = 1, dlongest = 0, num = 0;
     while (i < 100001)
     {
-        if (longest < sequence(i))
+        if (dlongest < sequence(i))
         {
-            longest = sequence(i);
+            dlongest = sequence(i);
+            num = i;
         }
         i = i + 1;
     }
-    return longest;
+    return num;
 }
