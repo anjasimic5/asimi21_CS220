@@ -1,6 +1,9 @@
+// you missed the message about using a long long.  Didn't work
+// when I used one million in longest.  -1
+
 #include <stdio.h>
-int sequence(int n){
-    int i = 1;
+long long sequence(long long n){  // changed to long long
+    long long i = 1;   // changed to long long
     while(n != 1)
     {
         if (n % 2 == 0)
@@ -19,14 +22,17 @@ int sequence(int n){
 
 int longest(void){
     long long i = 1, dlongest = 0, num = 0;
-    while (i < 100001)
+    while (i < 1000001)  // changed this from 100001
     {
-        if (dlongest < sequence(i))
+        long long tmp = sequence(i);
+        // if (dlongest < sequence(i))
+        if (dlongest < tmp)
         {
-            dlongest = sequence(i);
+            dlongest = tmp;
             num = i;
         }
         i = i + 1;
     }
+    printf("%lld\n", dlongest);
     return num;
 }
