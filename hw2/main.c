@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "int2bin.h"
 
+// Good Anja  20/20
+
 int main(void){
 
     int n;
